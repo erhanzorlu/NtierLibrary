@@ -13,6 +13,7 @@ namespace BusinessLayer.Repository.Abstract
         public T FindId(int id);
         public string Delete(int id);
 
+        public List<T> GetAll();
 
     }
 }

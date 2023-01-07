@@ -12,6 +12,8 @@ namespace DataAccess.Entity
         public string BookName { get; set; }
         public int Page {  get; set; }
         public string? Description { get; set; }
+        public decimal? Price { get; set; }
+        public decimal? PriceTotal { get { return Price * 1.18M; } }
 
         public List<BookCategory> BookCategories { get; set; }
         public int AuthorId { get; set; }
