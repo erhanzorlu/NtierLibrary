@@ -70,31 +70,6 @@ namespace BusinessLayer.Repository.Concrete
                 return ex.Message;
             }
         }
-       public void metot1()
-        {
-            var result=(from o in db.Books
-                       select o.Price).Sum();
-            Console.WriteLine(result);
-        }
-        public void metot2(decimal deger)
-        {
-            var result = (from b in db.Books
-                          
-                          join a in db.Authors on b.Id equals a.Id
-                          where b.Price > deger                        
-                          select new
-                          {
-                         b.Price,
-                         b.BookName,
-                         Yazar=a.FirstName+a.LastName,
-
-                              
-                          });
-            foreach (var item in result)
-            {
-                global::System.Console.WriteLine(item);
-            }
-                        
-        }
+       
     }
 }
