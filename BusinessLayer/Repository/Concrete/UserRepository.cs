@@ -82,5 +82,16 @@ namespace Bll.Repository.Concrete
             }
             return false;
         }
+        public void Metot1(string deger)
+        {
+            var result = from o in db.Users
+                         where o.UserName.Contains(deger)
+                         select o.UserName;
+            foreach (var item in result)
+            {
+                global::System.Console.WriteLine(item);
+            }
+        }
+
     }
 }
